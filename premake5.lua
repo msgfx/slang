@@ -202,7 +202,7 @@ workspace "slang"
     targetdir("bin/" .. targetName .. "/%{cfg.buildcfg:lower()}")
 
     -- Statically link to the C/C++ runtime rather than create a DLL dependency.
-    flags { "StaticRuntime" }
+    staticruntime "On"
 
     -- Once we've set up the common settings, we will make some tweaks
     -- that only apply in a subset of cases. Each call to `filter()`
